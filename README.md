@@ -1,7 +1,8 @@
 <a name="readme-top"></a>
 
-<!-- TODO: INSERT STATUS BADGES HERE -->
 <!-- STATUS BADGES -->
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/55619ad5-180c-44b5-9ee9-7066855ed583/deploy-status)](https://app.netlify.com/sites/misfitdodo/deploys)
 
 <!-- PROJECT HEADING -->
 <br />
@@ -354,7 +355,7 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [project-screenshot]: images/project-screenshot.jpg
-[project-url]: INSERT_PROJECT_URL
+[project-url]: https://misfitdodo.netlify.app/
 [repo-url]: https://github.com/justintsugranes/project_misfitdodo-website.git
 [contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
 [contributors-url]: https://github.com/justintsugranes/project_misfitdodo-website/graphs/contributors
