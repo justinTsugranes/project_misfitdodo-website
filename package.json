@@ -1,0 +1,25 @@
+{
+  "name": "project_misfitdodo-website",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run sanity\"",
+    "client": "cd client && npm start",
+    "sanity": "cd sanity && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinTsugranes/project_misfitdodo-website.git"
+  },
+  "keywords": [],
+  "author": "justinTsugranes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinTsugranes/project_misfitdodo-website/issues"
+  },
+  "homepage": "https://github.com/justinTsugranes/project_misfitdodo-website#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

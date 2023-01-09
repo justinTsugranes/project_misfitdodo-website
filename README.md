@@ -65,7 +65,9 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
   <!-- [![jquery]][jquery-url] -->
   <!-- [![laravel]][laravel-url] -->
   <!-- [![next]][next-url] -->
-  <!-- [![react]][react-url] -->
+
+[![react]][react-url]
+
   <!-- [![svelte]][svelte-url] -->
   <!-- [![vue]][vue-url] -->
 
@@ -353,17 +355,17 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 
 [project-screenshot]: images/project-screenshot.jpg
 [project-url]: INSERT_PROJECT_URL
-[repo-url]: https://github.com/justintsugranes/INSERT_PROJECT_TITLE_HERE.git
-[contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/INSERT_PROJECT_TITLE_HERE.svg?style=for-the-badge
-[contributors-url]: https://github.com/justintsugranes/INSERT_PROJECT_TITLE_HERE/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/justintsugranes/INSERT_PROJECT_TITLE_HERE.svg?style=for-the-badge
-[forks-url]: https://github.com/justintsugranes/INSERT_PROJECT_TITLE_HERE/network/members
-[stars-shield]: https://img.shields.io/github/stars/justintsugranes/INSERT_PROJECT_TITLE_HERE.svg?style=for-the-badge
-[stars-url]: https://github.com/justintsugranes/INSERT_PROJECT_TITLE_HERE/stargazers
-[issues-shield]: https://img.shields.io/github/issues/justintsugranes/INSERT_PROJECT_TITLE_HERE.svg?style=for-the-badge
-[issues-url]: https://github.com/justintsugranes/INSERT_PROJECT_TITLE_HERE/issues
-[license-shield]: https://img.shields.io/github/license/justintsugranes/INSERT_PROJECT_TITLE_HERE.svg?style=for-the-badge
-[license-url]: https://github.com/justinTsugranes/INSERT_PROJECT_TITLE_HERE/blob/main/LICENSE.md
+[repo-url]: https://github.com/justintsugranes/project_misfitdodo-website.git
+[contributors-shield]: https://img.shields.io/github/contributors/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
+[contributors-url]: https://github.com/justintsugranes/project_misfitdodo-website/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
+[forks-url]: https://github.com/justintsugranes/project_misfitdodo-website/network/members
+[stars-shield]: https://img.shields.io/github/stars/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
+[stars-url]: https://github.com/justintsugranes/project_misfitdodo-website/stargazers
+[issues-shield]: https://img.shields.io/github/issues/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
+[issues-url]: https://github.com/justintsugranes/project_misfitdodo-website/issues
+[license-shield]: https://img.shields.io/github/license/justintsugranes/project_misfitdodo-website.svg?style=for-the-badge
+[license-url]: https://github.com/justinTsugranes/project_misfitdodo-website/blob/main/LICENSE.md
 
 <!-- TODO: UNCOMMENT USED TECH -->
 <!-- TECH SHIELD VARIABLES -->
@@ -380,8 +382,10 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 [laravel-url]: https://laravel.com -->
 <!-- [next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/ -->
-<!-- [react]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/ -->
+
+[react]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+
 <!-- [svelte]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [svelte-url]: https://svelte.dev/ -->
 <!-- [vue]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
