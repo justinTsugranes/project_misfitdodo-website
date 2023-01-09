@@ -14,9 +14,7 @@
 
 ### [misfitDodo][project-url]
 
-<!-- TODO: ADD SHORT PROJECT DESCRIPTION -->
-
-Official Website of misfitDodo Media
+Official Website of misfitDodo Media. Built with React.js, Sanity.io, Framer Motion and more!
 
 [Explore the docs][repo-url] --- [View Demo][project-url] --- [Report Bug][issues-url]
 
