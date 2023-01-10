@@ -6,7 +6,8 @@ import './About.scss'
 import { client, urlFor } from '../../client'
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]) // Set a state variable "abouts" that will hold the data returned from Sanity
+  // Set a state variable "abouts" that will hold the data returned from Sanity
+  const [abouts, setAbouts] = useState([])
 
   useEffect(() => {
     const query = '*[_type == "abouts"]' // Define the Sanity query to get all documents of type "abouts"
