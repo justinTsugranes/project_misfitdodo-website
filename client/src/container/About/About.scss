@@ -1,0 +1,67 @@
+/* Define the style for the about section */
+.app__about {
+  /* Set the flex properties and width */
+  flex: 1;
+  width: 100%;
+
+  /* Set the flex direction */
+  flex-direction: column;
+}
+
+/* Define the style for the profiles container */
+.app__profiles {
+  /* Center the items within the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Enable wrapping of items */
+  flex-wrap: wrap;
+
+  /* Add some margin to the top of the container */
+  margin-top: 2rem;
+}
+
+/* Define the style for each profile item */
+.app__profile-item {
+  /* Set the width of the item */
+  width: 190px;
+
+  /* Set the flex properties */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* Set the flex direction */
+  flex-direction: column;
+
+  /* Add some margin to the item */
+  margin: 2rem;
+
+  /* Style the image within the profile item */
+  img {
+    /* Set the width and height of the image */
+    width: 100%;
+    height: 170px;
+
+    /* Add some border radius to the image */
+    border-radius: 15px;
+
+    /* Ensure the image is always fully visible within the container */
+    object-fit: cover;
+  }
+
+  /* Use a media query to change the styles for larger screens */
+  @media screen and (min-width: 2000px) {
+    /* Increase the width and margins of the profile item for larger screens */
+    width: 370px;
+    margin: 2rem 4rem;
+    /* Style the image within the profile item */
+    img {
+      width: 100%;
+      height: 170px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
+}

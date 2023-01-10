@@ -1,29 +1,39 @@
+// Define the style for the navbar element
 .app__navbar {
+  // Set the width and height
   width: 100%;
 
+  // Set the display properties
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  // Set the padding, background color, and border
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  // Set the position and z-index
   position: fixed;
   z-index: 2;
 }
 
+// Define the style for the navbar logo element
 .app__navbar-logo {
+  // Set the display properties
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
+  // Set the style for the logo image
   img {
     width: 90px;
     height: 20px;
 
+    // Use a media query to change the style for larger screens
     @media screen and (min-width: 2000px) {
       width: 180px;
       height: 40px;
@@ -31,20 +41,27 @@
   }
 }
 
+// Define the style for the navbar links element
 .app__navbar-links {
+  // Set the flex properties
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  // Remove the default list style
   list-style: none;
 
+  // Define the style for each list item
   li {
+    // Set the margin and cursor
     margin: 0 1rem;
     cursor: pointer;
 
+    // Set the flex direction
     flex-direction: column;
 
+    // Define the style for the div element inside the list item
     div {
       width: 5px;
       height: 5px;
@@ -54,15 +71,20 @@
       margin-bottom: 5px;
     }
 
+    // Define the style for the link element inside the list item
     a {
       color: var(--gray-color);
       text-decoration: none;
       flex-direction: column;
 
+      // Set the text transform and font weight
       text-transform: uppercase;
       font-weight: 500;
 
+      // Set the transition effect
       transition: all 0.3s ease-in-out;
+
+      // Change the color when the link is hovered over
 
       &:hover {
         color: var(--secondary-color);
@@ -82,69 +104,105 @@
 }
 
 .app__navbar-menu {
+  /* set the width and height of the menu button to 35px */
   width: 35px;
   height: 35px;
+
+  /* set the border radius to 50% to make the button a circle */
   border-radius: 50%;
   position: relative;
 
+  /* center the icon inside the button */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* set the background color of the button */
   background-color: var(--secondary-color);
 
+  /* style the icon inside the button */
   svg {
+    /* set the width and height of the icon to 70% of the button */
     width: 70%;
     height: 70%;
+
+    /* set the color of the icon to white */
     color: var(--white-color);
   }
 
+  /* style the dropdown menu */
   div {
+    /* position the menu at the top right of the screen */
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
+
+    /* set the z-index of the menu to be above other elements */
     z-index: 5;
 
+    /* add some padding to the menu */
     padding: 1rem;
 
+    /* set the width and height of the menu to 80% of the screen */
     width: 80%;
     height: 100vh;
 
+    /* center the menu vertically and align it to the right */
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
+    /* set the direction of the menu items to be in a column */
     flex-direction: column;
 
+    /* set the background of the menu to a white image */
     background: url('../../assets/bgWhite.png');
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
 
-    /* top box shadow */
+    /* add a shadow to the top of the menu */
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
+    /* style the close icon inside the menu */
     svg {
+      /* set the width and height of the icon to 35px */
       width: 35px;
       height: 35px;
+
+      /* set the color of the icon to the secondary color */
       color: var(--secondary-color);
+
+      /* add some margin to the icon */
       margin: 0.5rem 1rem;
     }
 
+    /* style the list of menu items */
     ul {
+      /* remove list styling */
       list-style: none;
       margin: 0;
       padding: 0;
+
+      /* set the height and width of the list to be 100% of the menu */
       height: 100%;
       width: 100%;
 
+      /* center the items vertically and align them to the left */
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+
+      /* set the direction of the items to be in a column */
       flex-direction: column;
 
+      /* style each list item */
       li {
+        /* add some margin to the item */
         margin: 1rem;
 
+        /* style the link inside*/
         a {
           color: var(--gray-color);
           text-decoration: none;
