@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const MotionWrap = (Component, classNames) => {
   // This is a Higher Order Component (HOC) that wraps the passed component and adds animation functionality using framer-motion
-  function HOC() {
+  return function HOC() {
     return (
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
