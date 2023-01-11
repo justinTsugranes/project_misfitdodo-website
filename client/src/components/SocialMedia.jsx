@@ -7,13 +7,31 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsTwitter />
+        <a
+          href="https://twitter.com/misfitdodo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsTwitter />
+        </a>
       </div>
       <div>
-        <FaFacebookF />
+        <a
+          href="https://facebook.com/misfitdodo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebookF />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a
+          href="https://instagram.com/misfitdodo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BsInstagram />
+        </a>
       </div>
     </div>
   )
