@@ -19,7 +19,7 @@
     "url": "https://github.com/justinTsugranes/project_misfitdodo-website/issues"
   },
   "homepage": "https://github.com/justinTsugranes/project_misfitdodo-website#readme",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^7.6.0"
   }
 }
