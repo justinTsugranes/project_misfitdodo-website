@@ -1,130 +1,204 @@
+/* The main container for the footer section */
 .app__footer {
+  /* Takes up all available space within its parent container */
   flex: 1;
   width: 100%;
+  /* Children elements are displayed in a column */
   flex-direction: column;
 
+  /* Media query to change layout when screen width is less than 768px */
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 }
 
+/* Container for the cards that display contact information */
 .app__footer-cards {
   width: 60%;
+  /* Children elements are displayed in a row */
   display: flex;
+  /* Space between children elements is distributed evenly */
   justify-content: space-evenly;
+  /* Children elements are aligned to the center */
   align-items: center;
+  /* Children elements wrap to the next line when they run out of space */
   flex-wrap: wrap;
+  /* Margin applied to the container */
   margin: 4em 2rem 2rem;
 
+  /* Single card within the container */
   .app__footer-card {
+    /* Minimum width of the card */
     min-width: 290px;
+    /* Children elements are displayed in a row */
     display: flex;
     flex-direction: row;
+    /* First child element is aligned to the start */
     justify-content: flex-start;
+    /* Children elements are aligned to the center */
     align-items: center;
 
+    /* Margin and padding applied to the card */
     margin: 1rem 0;
     padding: 1rem;
+    /* Rounded corners */
     border-radius: 10px;
+    /* Pointer cursor displayed on hover */
     cursor: pointer;
+    /* Background color */
     background-color: #fef4f5;
 
+    /* Animation effect */
     transition: all 0.3s ease-in-out;
 
+    /* Image within the card */
     img {
+      /* Width and height of the image */
       width: 40px;
       height: 40px;
+      /* Margin applied to the image */
       margin: 0 0.7rem;
     }
 
+    /* Text within the card */
     p {
+      /* Font weight */
       font-weight: 500;
     }
+    /* Link within the card */
     a {
+      /* No underline */
       text-decoration: none;
+      /* Font weight */
       font-weight: 500;
     }
+    /* Animation effect on hover */
     &:hover {
       box-shadow: 0 0 25px #fef4f5;
     }
 
+    /* Media query to change layout when screen width is less than 450px */
     @media screen and (max-width: 450px) {
+      /* Card takes up the full width */
       width: 100%;
     }
   }
 
+  /* Media query to change layout when screen width is less than 768px */
   @media screen and (max-width: 768px) {
+    /* Container takes up the full width */
     width: 100%;
   }
 }
 
+/* Changes the background color of the last card within the container */
 .app__footer-cards .app__footer-card:last-child {
   background-color: #f2f7fb;
 }
 
+/* Changes the box shadow of the last card within the container on hover */
 .app__footer-cards .app__footer-card:last-child:hover {
   box-shadow: 0 0 25px #f2f7fb;
 }
 
+/* Container for the form in the footer */
 .app__footer-form {
+  /* Width of the container */
   width: 60%;
+  /* Children elements are displayed in a column */
   flex-direction: column;
+  /* Margin applied to the container */
   margin: 1rem 2rem;
 
+  /* Single form element within the container */
   div {
+    /* Element takes up the full width */
     width: 100%;
 
+    /* Margin applied to the element */
     margin: 0.75rem 0;
+    /* Rounded corners */
     border-radius: 10px;
+    /* Pointer cursor displayed on hover */
     cursor: pointer;
+    /* Background color */
     background-color: var(--primary-color);
 
+    /* Animation effect */
     transition: all 0.3s ease-in-out;
 
+    /* Input and textarea elements within the form */
     input,
     textarea {
+      /* Element takes up the full width */
       width: 100%;
+      /* Padding applied to the element */
       padding: 0.95rem;
+      /* No border */
       border: none;
+      /* Rounded corners */
       border-radius: 7px;
+      /* Background color */
       background-color: var(--primary-color);
 
+      /* Font family */
       font-family: var(--font-base);
+      /* Text color */
       color: var(--secondary-color);
+      /* No outline */
       outline: none;
     }
 
+    /* Textarea element within the form */
     textarea {
+      /* Height of the element */
       height: 170px;
     }
 
+    /* Animation effect on hover */
     &:hover {
       box-shadow: 0 0 25px var(--primary-color);
     }
   }
 
+  /* Submit button within the form */
   button {
+    /* Padding applied to the button */
     padding: 1rem 2rem;
+    /* Rounded corners */
     border-radius: 10px;
+    /* No border */
     border: none;
+    /* Background color */
     background-color: var(--secondary-color);
 
+    /* Font weight */
     font-weight: 500;
+    /* Text color */
     color: var(--white-color);
+    /* No outline */
     outline: none;
+    /* Margin applied */
     margin: 2rem 0 0 0;
+    /* Font family */
     font-family: var(--font-base);
 
+    /* Animation effect */
     transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    /* Pointer cursor displayed on hover */
     cursor: pointer;
 
+    /* Change background color on hover */
     &:hover {
       background-color: #2430af;
     }
   }
 
+  /* Media query to change layout when screen width is less than 768px */
   @media screen and (max-width: 768px) {
+    /* Width of the container */
     width: 100%;
+    /* Margin applied to the container */
     margin: 1rem 0;
   }
 }
