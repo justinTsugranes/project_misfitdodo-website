@@ -1,9 +1,11 @@
+/* Styles for the Skills component */
 .app__skills {
   flex: 1;
   width: 100%;
   flex-direction: column;
 }
 
+/* Container for the skills and experiences sections */
 .app__skills-container {
   width: 80%;
   margin-top: 3rem;
@@ -11,12 +13,14 @@
   display: flex;
   flex-direction: row;
 
+  /* Stack the sections on top of each other on small screens */
   @media screen and (max-width: 900px) {
     width: 100%;
     flex-direction: column;
   }
 }
 
+/* Styles for the skills section */
 .app__skills-list {
   flex: 1;
   display: flex;
@@ -24,8 +28,10 @@
   justify-content: flex-start;
   align-items: flex-start;
 
+  /* Add margin to the right side of the skills section */
   margin-right: 5rem;
 
+  /* Center the skills section on small screens and remove the right margin */
   @media screen and (max-width: 900px) {
     margin-right: 0;
     justify-content: center;
@@ -33,34 +39,43 @@
   }
 }
 
+/* Styles for each individual skill item */
 .app__skills-item {
   flex-direction: column;
   text-align: center;
 
+  /* Add margin to each skill item */
   margin: 1rem;
 
+  /* Add transition for hover effect */
   transition: all 0.3s ease-in-out;
 
+  /* Styles for the skill item's icon container */
   div {
     width: 90px;
     height: 90px;
     border-radius: 50%;
     background-color: #fef4f5;
 
+    /* Styles for the skill item's icon */
     img {
       width: 50%;
       height: 50%;
     }
 
+    /* Add hover effect to the icon container */
     &:hover {
       box-shadow: 0 0 25px #fef4f5;
     }
 
+    /* Increase the size of the icon container on large screens */
     @media screen and (min-width: 2000px) {
       width: 150px;
       height: 150px;
     }
 
+    /* if the screen size is max-width 450px, 
+    reduce the width and height of the skill item */
     @media screen and (max-width: 450px) {
       width: 70px;
       height: 70px;
@@ -68,13 +83,18 @@
   }
 
   p {
+    /* font-weight of the paragraph */
     font-weight: 500;
+    /* margin-top for the paragraph */
     margin-top: 0.5rem;
   }
 
+  /* if the screen size is min-width 2000px */
   @media screen and (min-width: 2000px) {
+    /* increase the margin of the skill item*/
     margin: 1rem 2rem;
 
+    /* increase the margin-top of the paragraph */
     p {
       margin-top: 1rem;
     }
@@ -88,6 +108,7 @@
   align-items: flex-start;
   flex-direction: column;
 
+  /* This media query is used to adjust the layout when the screen width is less than or equal to 900px */
   @media screen and (max-width: 900px) {
     margin-top: 2rem;
   }
@@ -113,10 +134,12 @@
     margin-bottom: 1rem;
     cursor: pointer;
 
+    /* The h4 element has a font weight of 500, which is bolder than the default font weight */
     h4 {
       font-weight: 500;
     }
 
+    /* The p element has a font weight of 400, which is the default font weight */
     p {
       font-weight: 400;
       color: var(--gray-color);
@@ -126,18 +149,22 @@
 }
 
 .app__skills-exp-year {
+  /* This class is applied to the container that holds the year of the experience */
   margin-right: 3rem;
 
   p {
+    /* This class is applied to the text element that holds the year */
     font-weight: 800;
     color: var(--secondary-color);
   }
 
+  /* Media query to adjust the layout when the screen width is less than 450px */
   @media screen and (max-width: 450px) {
     margin-right: 1rem;
   }
 }
 
+/* This class is applied to the tooltip that appears when hovering over a work experience */
 .skills-tooltip {
   max-width: 300px !important;
   background-color: var(--white-color) !important;
@@ -149,6 +176,7 @@
   line-height: 1.5 !important;
   opacity: 1 !important;
 
+  /* Media query to adjust the layout when the screen width is more than 2000px */
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem !important;
     max-width: 500px !important;
