@@ -2,8 +2,6 @@
 
 <!-- STATUS BADGES -->
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/55619ad5-180c-44b5-9ee9-7066855ed583/deploy-status)](https://app.netlify.com/sites/misfitdodo/deploys)
-
 <!-- PROJECT HEADING -->
 <br />
 <div align="center">
@@ -12,7 +10,7 @@
   </a>
 </div>
 
-### [misfitDodo][project-url]
+### [misfitDodo Media][project-url]
 
 Official Website of misfitDodo Media. Built with React.js, Sanity.io, Framer Motion and more!
 
@@ -48,7 +46,7 @@ Official Website of misfitDodo Media. Built with React.js, Sanity.io, Framer Mot
 
 <!-- TODO: ADD LONG PROJECT DESCRIPTION -->
 
-LONG_PROJECT_DESCRIPTION
+<!-- LONG_PROJECT_DESCRIPTION -->
 
 _I'd love to hear any feedback or just thoughts. Feel free to reach out at my contact info below. Cheers!_
 
@@ -92,7 +90,9 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
   <!-- [![flutter]][flutter-url] -->
 
 <!-- - **Misc Frontend Libraries & Packages** -->
-  <!-- [![framer]][framer-url] -->
+
+[![framer]][framer-url]
+
   <!-- [![fontawesome]][fontawesome-url] -->
 
 <!-- - **UI/UX / Graphic Design** -->
@@ -139,7 +139,9 @@ _I'd love to hear any feedback or just thoughts. Feel free to reach out at my co
 
 <!-- [![heroku]][heroku-url] -->
 <!-- [![netlify]][netlify-url] -->
-<!-- [![vercel]][vercel-url] -->
+
+[![vercel]][vercel-url]
+
 <!-- [![stackblitz]][stackblitz-url] -->
 
 <!-- [![chrome-web-store]][chrome-web-store-url] -->
@@ -427,8 +429,10 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 
 <!-- [fontawesome]: https://img.shields.io/badge/FontAwesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white
 [fontawesome-url]: https://fontawesome.com/ -->
-<!-- [framer]: https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white
-[framer-url]: https://www.framer.com/motion/ -->
+
+[framer]: https://img.shields.io/badge/Framer-0055FF?style=for-the-badge&logo=framer&logoColor=white
+[framer-url]: https://www.framer.com/motion/
+
 <!-- [storybook]: https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white
 [storybook-url]: https://storybook.js.org/ -->
 <!-- [swiper]: https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white
@@ -522,8 +526,10 @@ Send me some [![bitcoin]][bitcoin-address] or [![ethereum]][ethereum-address] --
 [heroku-url]: https://www.heroku.com/ -->
 <!-- [netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 [netlify-url]: https://www.netlify.com/ -->
-<!-- [vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
-[vercel-url]: https://vercel.com/ -->
+
+[vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+[vercel-url]: https://vercel.com/
+
 <!-- TODO EDIT BADGE -->
 <!-- [chrome-web-store]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [chrome-web-store-url]: https://vercel.com/ -->
