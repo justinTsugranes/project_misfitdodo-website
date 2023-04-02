@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+import { sanityClient } from '../../lib'
 import './Testimonial.scss'
 
 const Testimonial = () => {
@@ -20,16 +20,17 @@ const Testimonial = () => {
   }
 
   useEffect(() => {
-    // Fetch the data from the client
     const query = '*[_type == "testimonials"]'
     const brandsQuery = '*[_type == "brands"]'
 
-    client.fetch(query).then((data) => {
+    sanityClient.fetch(query).then((data) => {
       setTestimonials(data)
+      console.log(`Testimonials:`, data)
     })
 
-    client.fetch(brandsQuery).then((data) => {
+    sanityClient.fetch(brandsQuery).then((data) => {
       setBrands(data)
+      console.log(`Brands:`, data)
     })
   }, [])
 
@@ -37,28 +38,20 @@ const Testimonial = () => {
     <>
       {testimonials.length && (
         <>
-          {/* This div wraps the testimonial item, which includes an image and testimonial content */}
           <div className="app__testimonial-item app__flex">
-            {/* Displays the image of the current testimonial */}
             <img
-              src={urlFor(testimonials[currentIndex].imgurl)}
+              src={testimonials[currentIndex].imgurl.url}
               alt={testimonials[currentIndex].name}
             />
-            {/* Wraps the testimonial content */}
             <div className="app__testimonial-content">
-              {/* Displays the feedback of the current testimonial */}
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
-              {/* Wraps the name and company of the current testimonial */}
               <div>
-                {/* Displays the name of the current testimonial */}
                 <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
-                {/* Displays the company of the current testimonial */}
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
               </div>
             </div>
           </div>
 
-          {/* This div wraps the left and right arrow buttons */}
           <div className="app__testimonial-btns app__flex">
             {/* Left arrow button */}
             <div
@@ -93,16 +86,13 @@ const Testimonial = () => {
 
       {/* This div wraps all the brand logos */}
       <div className="app__testimonial-brands app__flex">
-        {/* Maps through all the brands and displays their logos */}
         {brands.map((brand) => (
-          // This motion div animates the brand logos when they are in view
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5, type: 'tween' }}
             key={brands._id}
           >
-            {/* Displays the brand logo */}
-            <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+            <img src={brand.imgUrl.url} alt={brand.name} />
           </motion.div>
         ))}
       </div>

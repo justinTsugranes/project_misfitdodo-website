@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
 import { AppWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+import { sanityClient } from '../../lib'
 import './Work.scss'
 
 const Work = () => {
@@ -17,9 +17,11 @@ const Work = () => {
     const query = '*[_type == "works"]'
 
     // Fetch the data from Sanity using the query
-    client.fetch(query).then((data) => {
+    sanityClient.fetch(query).then((data) => {
       setWorks(data)
       setFilterWork(data)
+      console.log(`Works:`, data)
+      console.log(`FilterWorks:`, filterWork)
     })
   }, [])
 
@@ -67,10 +69,10 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
+        {filterWork?.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={work.imgUrl.url} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

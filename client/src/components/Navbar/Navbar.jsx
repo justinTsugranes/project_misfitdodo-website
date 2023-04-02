@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
-import { images } from '../../constants'
+import { images } from '../../assets'
 import './Navbar.scss'
 
 const Navbar = () => {
@@ -23,21 +23,16 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu">
-        {/* Render the menu icon and bind the click event to the `setToggle` function */}
         <HiMenuAlt4 onClick={() => setToggle(true)} />
-        {/* If the `toggle` state variable is `true`, render a menu */}
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: 'easeOut' }}
           >
-            {/* Render the close icon and bind the click event to the `setToggle` function */}
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {/* Render a list of links */}
               {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                 <li key={item}>
-                  {/* Each link has an href that corresponds to an element with an ID matching the link text */}
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
                   </a>

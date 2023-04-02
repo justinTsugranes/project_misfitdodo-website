@@ -1,30 +1,25 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-import { images } from '../../constants'
+import { images } from '../../assets'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { client } from '../../client'
+import { sanityClient } from '../../lib'
 import './Footer.scss'
 
 const Footer = () => {
-  // Hooks to manage the state of the form
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  // Destructuring the form data for easy access
   const { name, email, message } = formData
 
-  // Event handler for when the user types in the input fields
   const handleChangeInput = (e) => {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
 
-  // Event handler for when the user submits the form
   const handleSubmit = () => {
     setLoading(true)
 
-    // Construct the contact object
     const contact = {
       _type: 'contact',
       name: formData.username,
@@ -32,11 +27,9 @@ const Footer = () => {
       message: formData.message,
     }
 
-    // Use the client library to send the contact object to the server
-    client
+    sanityClient
       .create(contact)
       .then(() => {
-        // If the contact was sent successfully
         setLoading(false)
         setIsFormSubmitted(true)
       })
@@ -45,7 +38,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Lets Make It Happen - Reach Out to Us Today</h2>
+      <h2 className="head-text">Lets Make It Happen - Reach Out To Us Today</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -111,8 +104,7 @@ const Footer = () => {
   )
 }
 
-// AppWrap and MotionWrap are Higher Order Components (HOC)
-// that are used to add additional functionality to the Footer component
+// AppWrap and MotionWrap are Higher Order Components (HOC) that are used to add additional functionality to the Footer component
 
 // AppWrap takes 3 arguments
 // 1st argument is the component to be wrapped

@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import { AppWrap, MotionWrap } from '../../wrapper'
+import { sanityClient } from '../../lib'
 import './About.scss'
-import { client, urlFor } from '../../client'
 
 const About = () => {
   // Set a state variable "abouts" that will hold the data returned from Sanity
   const [abouts, setAbouts] = useState([])
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]' // Define the Sanity query to get all documents of type "abouts"
+    const query = '*[_type == "abouts"]'
 
-    client.fetch(query).then((data) => {
-      // Fetch the data from Sanity using the query
-      setAbouts(data) // Set the state variable "abouts" to the data returned from Sanity
+    sanityClient.fetch(query).then((data) => {
+      setAbouts(data)
+      console.log(`Abouts:`, data)
     })
   }, [])
 
@@ -26,7 +26,7 @@ const About = () => {
 
       <div className="app__profiles">
         {/* Iterate over the "abouts" data returned from Sanity */}
-        {abouts.map((about, index) => (
+        {abouts?.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
@@ -34,8 +34,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            {/* Use the urlFor() function to get the URL for the image */}
-            <img src={urlFor(about.imgUrl)} alt="about-title" />
+            <img src={about.imgUrl.url} alt="about-title" />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
