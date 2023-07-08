@@ -37,12 +37,6 @@
   }
 }
 
-.app__navigation-dot {
-  &.active {
-    background-color: #313bac;
-  }
-}
-
 .copyright {
   width: 100%;
   padding: 2rem 0 0;
@@ -174,6 +168,10 @@
 
     &:hover {
       background-color: var(--secondary-color);
+    }
+
+    &.active {
+      background-color: #313bac;
     }
 
     @media screen and (min-width: 2000px) {
