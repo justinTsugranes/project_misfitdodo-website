@@ -1,7 +1,7 @@
 {
   "name": "misfitdodo-frontend",
   "description": "Frontend for the misfitDodo Media website",
-  "author": "misfitdodo",
+  "author": "misfitDodo Media",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@sanity/cli": "^3.5.0"
   }
 }

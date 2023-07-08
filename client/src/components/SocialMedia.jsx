@@ -1,36 +1,30 @@
 import { BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaFacebookF } from 'react-icons/fa'
 
+const socialMediaLinks = [
+  { name: 'Twitter', url: 'https://twitter.com/misfitdodo', icon: BsTwitter },
+  {
+    name: 'Facebook',
+    url: 'https://facebook.com/misfitdodo',
+    icon: FaFacebookF,
+  },
+  {
+    name: 'Instagram',
+    url: 'https://instagram.com/misfitdodo',
+    icon: BsInstagram,
+  },
+]
+
 const SocialMedia = () => {
   return (
     <div className="app__social">
-      <div>
-        <a
-          href="https://twitter.com/misfitdodo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsTwitter />
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://facebook.com/misfitdodo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaFacebookF />
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://instagram.com/misfitdodo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsInstagram />
-        </a>
-      </div>
+      {socialMediaLinks.map(({ name, url, icon: Icon }) => (
+        <div key={name}>
+          <a href={url} target="_blank" rel="noreferrer" aria-label={name}>
+            <Icon />
+          </a>
+        </div>
+      ))}
     </div>
   )
 }

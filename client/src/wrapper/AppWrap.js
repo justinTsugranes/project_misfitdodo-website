@@ -5,8 +5,8 @@ const currentYear = new Date().toLocaleDateString('en-US', {
 })
 
 /* Higher Order Component (HOC) - used as a wrapper for the main components of the app */
-const AppWrap = (Component, idName, classNames) => {
-  return function HOC() {
+const AppWrap = (Component, { idName, classNames }) => {
+  function WrappedComponent() {
     return (
       <div id={idName} className={`app__container ${classNames}`}>
         <SocialMedia />
@@ -24,6 +24,13 @@ const AppWrap = (Component, idName, classNames) => {
       </div>
     )
   }
+
+  // Give the wrapped component a more helpful display name for debugging
+  WrappedComponent.displayName = `AppWrap(${
+    Component.displayName || Component.name || 'Component'
+  })`
+
+  return WrappedComponent
 }
 
 export default AppWrap

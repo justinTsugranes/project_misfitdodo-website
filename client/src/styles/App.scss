@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .app__wrapper {
@@ -33,6 +34,12 @@
 
   @media screen and (max-width: 450px) {
     padding: 4rem 1rem 2rem;
+  }
+}
+
+.app__navigation-dot {
+  &.active {
+    background-color: #313bac;
   }
 }
 

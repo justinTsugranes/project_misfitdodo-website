@@ -1,21 +1,31 @@
 import { motion } from 'framer-motion'
 
-const MotionWrap = (Component, classNames) => {
-  // This is a Higher Order Component (HOC) that wraps the passed component and adds animation functionality using framer-motion
-  return function HOC() {
+const MotionWrap = (
+  Component,
+  { classNames, animation = {}, transition = { duration: 0.5 } },
+) => {
+  // Default animation values
+  const defaultAnimation = { y: [100, 50, 0], opacity: [0, 0, 1] }
+  const appliedAnimation = { ...defaultAnimation, ...animation }
+
+  function WrappedComponent() {
     return (
       <motion.div
-        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-        // This is the framer-motion animation effect that will be triggered when the component is scrolled into view
-        // It will move the component down by 100px, then back up by 50px, and finally back to its original position
-        // The component's opacity will also animate from 0 to 1
-        transition={{ duration: 0.5 }}
+        whileInView={appliedAnimation}
+        transition={transition}
         className={`${classNames} app__flex`}
       >
         <Component />
       </motion.div>
     )
   }
+
+  // Give the wrapped component a more helpful display name for debugging
+  WrappedComponent.displayName = `MotionWrap(${
+    Component.displayName || Component.name || 'Component'
+  })`
+
+  return WrappedComponent
 }
 
 export default MotionWrap
